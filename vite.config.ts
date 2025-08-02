@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
-  base: '/tiktok-downloader-pwa/',
+  base: process.env.NODE_ENV === 'production' ? '/tiktok-downloader-pwa/' : '/',
   plugins: [
     vue(),
     VitePWA({
@@ -34,8 +34,8 @@ export default defineConfig({
         background_color: '#161823',
         display: 'standalone',
         orientation: 'portrait-primary',
-        scope: '/',
-        start_url: '/',
+        scope: '/tiktok-downloader-pwa/',
+        start_url: '/tiktok-downloader-pwa/',
         categories: ['entertainment', 'utilities', 'social'],
         lang: 'en',
         dir: 'ltr',
