@@ -1,0 +1,76 @@
+{
+  "app": {
+    "title": "Téléchargeur TikTok",
+    "subtitle": "Rapide, gratuit et sans filigrane. Support pour la qualité HD et l'audio MP3.",
+    "footer": "Téléchargez des vidéos TikTok sans filigrane - Rapide et Gratuit"
+  },
+  "nav": {
+    "home": "Accueil",
+    "trending": "Tendances"
+  },
+  "download": {
+    "title": "Télécharger des Vidéos TikTok",
+    "urlPlaceholder": "https://www.tiktok.com/@utilisateur/video/...",
+    "getVideo": "Obtenir la Vidéo",
+    "loading": "Chargement...",
+    "download": "Télécharger",
+    "downloadOptions": "Options de Téléchargement",
+    "supportedFormats": "Formats supportés: tiktok.com, vm.tiktok.com, m.tiktok.com",
+    "invalidUrl": "Veuillez entrer une URL TikTok valide",
+    "downloadFailed": "Téléchargement échoué",
+    "progress": "Téléchargements en Cours"
+  },
+  "video": {
+    "by": "Par:",
+    "duration": "Durée:",
+    "video": "Vidéo",
+    "audio": "Audio",
+    "format": "format"
+  },
+  "quality": {
+    "hd": "HD",
+    "sd": "SD",
+    "audio": "Audio"
+  },
+  "features": {
+    "noWatermarks": {
+      "title": "Sans Filigrane",
+      "description": "Téléchargez des vidéos propres sans filigrane TikTok"
+    },
+    "hdQuality": {
+      "title": "Qualité HD",
+      "description": "Téléchargez des vidéos dans la meilleure qualité disponible"
+    },
+    "freeFast": {
+      "title": "Gratuit et Rapide",
+      "description": "Service entièrement gratuit avec des vitesses de téléchargement rapides"
+    }
+  },
+  "trending": {
+    "title": "Vidéos Tendances",
+    "description": "Découvrez des vidéos TikTok populaires du monde entier",
+    "loadMore": "Charger Plus",
+    "noVideos": "Aucune vidéo tendance disponible pour le moment",
+    "refreshing": "Actualisation des vidéos tendances...",
+    "refresh": "Actualiser"
+  },
+  "language": {
+    "select": "Sélectionner la Langue",
+    "english": "English",
+    "spanish": "Español",
+    "french": "Français",
+    "german": "Deutsch",
+    "portuguese": "Português",
+    "italian": "Italiano",
+    "japanese": "日本語",
+    "korean": "한국어",
+    "chinese": "中文",
+    "arabic": "العربية"
+  },
+  "errors": {
+    "networkError": "Erreur réseau. Veuillez vérifier votre connexion.",
+    "invalidUrl": "URL TikTok invalide fournie",
+    "fetchFailed": "Échec de la récupération des informations vidéo",
+    "downloadError": "Téléchargement échoué. Veuillez réessayer."
+  }
+}

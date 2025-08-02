@@ -1,0 +1,100 @@
+{
+  "app": {
+    "title": "TikTok Downloader",
+    "subtitle": "Fast, free, and without watermarks. Support for HD quality and MP3 audio.",
+    "footer": "Download TikTok videos without watermarks - Fast & Free"
+  },
+  "nav": {
+    "home": "Home",
+    "trending": "Trending"
+  },
+  "download": {
+    "title": "Download TikTok Videos",
+    "urlPlaceholder": "Paste TikTok URL here (e.g. tiktok.com/username/video/123)",
+    "getVideo": "Get Video",
+    "loading": "Loading...",
+    "download": "Download",
+    "downloadOptions": "Download Options",
+    "supportedFormats": "Supported formats: tiktok.com, vm.tiktok.com, m.tiktok.com",
+    "invalidUrl": "Please enter a valid TikTok URL",
+    "downloadFailed": "Download failed",
+    "progress": "Downloads in Progress"
+  },
+  "video": {
+    "by": "By:",
+    "duration": "Duration:",
+    "video": "Video",
+    "audio": "Audio",
+    "format": "format"
+  },
+  "quality": {
+    "hd": "HD",
+    "sd": "SD", 
+    "audio": "Audio"
+  },
+  "features": {
+    "noWatermarks": {
+      "title": "No Watermarks",
+      "description": "Download clean videos without TikTok watermarks"
+    },
+    "hdQuality": {
+      "title": "HD Quality", 
+      "description": "Download videos in the highest available quality"
+    },
+    "freeFast": {
+      "title": "Free & Fast",
+      "description": "Completely free service with fast download speeds"
+    }
+  },
+  "trending": {
+    "title": "Trending Videos",
+    "description": "Discover popular TikTok videos from around the world",
+    "loadMore": "Load More",
+    "noVideos": "No trending videos available at the moment",
+    "refreshing": "Refreshing trending videos...",
+    "refresh": "Refresh"
+  },
+  "language": {
+    "select": "Select Language",
+    "english": "English",
+    "spanish": "Español", 
+    "french": "Français",
+    "german": "Deutsch",
+    "portuguese": "Português",
+    "italian": "Italiano",
+    "japanese": "日本語",
+    "korean": "한국어",
+    "chinese": "中文",
+    "arabic": "العربية"
+  },
+  "errors": {
+    "networkError": "Network error. Please check your connection.",
+    "invalidUrl": "Invalid TikTok URL provided",
+    "fetchFailed": "Failed to fetch video information",
+    "downloadError": "Download failed. Please try again."
+  },
+  "install": {
+    "title": "Install TikTok Downloader",
+    "description": "Install our app for faster access and offline use",
+    "install": "Install App",
+    "installing": "Installing...",
+    "later": "Maybe Later",
+    "mobileBanner": "Add TikTok Downloader to your home screen for quick access!",
+    "howTo": "How to install?",
+    "instructions": {
+      "title": "How to Install",
+      "ios": {
+        "title": "For iPhone/iPad:",
+        "step1": "Tap the Share button at the bottom of Safari",
+        "step2": "Scroll down and tap 'Add to Home Screen'",
+        "step3": "Tap 'Add' to install the app"
+      },
+      "android": {
+        "title": "For Android:",
+        "step1": "Tap the menu (⋮) in your browser",
+        "step2": "Select 'Add to Home screen' or 'Install app'",
+        "step3": "Tap 'Install' to add the app"
+      }
+    }
+  }
+}

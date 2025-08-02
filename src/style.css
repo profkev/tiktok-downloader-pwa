@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply bg-tiktok-pink hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:-translate-y-0.5 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none;
+  }
+  
+  .btn-secondary {
+    @apply bg-tiktok-blue hover:bg-cyan-400 text-tiktok-dark font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:-translate-y-0.5;
+  }
+  
+  .input-field {
+    @apply w-full p-3 border-2 border-gray-300 rounded-lg text-base transition-colors duration-300 focus:outline-none focus:border-tiktok-pink;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl p-6 shadow-lg;
+  }
+  
+  .loading-spinner {
+    @apply inline-block w-5 h-5 border-2 border-gray-200 border-t-tiktok-pink rounded-full animate-spin;
+  }
+}

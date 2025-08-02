@@ -1,0 +1,100 @@
+{
+  "app": {
+    "title": "Descargador de TikTok",
+    "subtitle": "Rápido, gratis y sin marcas de agua. Compatible con calidad HD y audio MP3.",
+    "footer": "Descarga videos de TikTok sin marcas de agua - Rápido y Gratis"
+  },
+  "nav": {
+    "home": "Inicio",
+    "trending": "Tendencias"
+  },
+  "download": {
+    "title": "Descargar Videos de TikTok",
+    "urlPlaceholder": "https://www.tiktok.com/@usuario/video/...",
+    "getVideo": "Obtener Video",
+    "loading": "Cargando...",
+    "download": "Descargar",
+    "downloadOptions": "Opciones de Descarga",
+    "supportedFormats": "Formatos compatibles: tiktok.com, vm.tiktok.com, m.tiktok.com",
+    "invalidUrl": "Por favor ingresa una URL válida de TikTok",
+    "downloadFailed": "Descarga fallida",
+    "progress": "Descargas en Progreso"
+  },
+  "video": {
+    "by": "Por:",
+    "duration": "Duración:",
+    "video": "Video",
+    "audio": "Audio",
+    "format": "formato"
+  },
+  "quality": {
+    "hd": "HD",
+    "sd": "SD",
+    "audio": "Audio"
+  },
+  "features": {
+    "noWatermarks": {
+      "title": "Sin Marcas de Agua",
+      "description": "Descarga videos limpios sin marcas de agua de TikTok"
+    },
+    "hdQuality": {
+      "title": "Calidad HD",
+      "description": "Descarga videos en la mejor calidad disponible"
+    },
+    "freeFast": {
+      "title": "Gratis y Rápido",
+      "description": "Servicio completamente gratuito con velocidades de descarga rápidas"
+    }
+  },
+  "trending": {
+    "title": "Videos Trending",
+    "description": "Descubre videos populares de TikTok de todo el mundo",
+    "loadMore": "Cargar Más",
+    "noVideos": "No hay videos trending disponibles en este momento",
+    "refreshing": "Actualizando videos trending...",
+    "refresh": "Actualizar"
+  },
+  "language": {
+    "select": "Seleccionar Idioma",
+    "english": "English",
+    "spanish": "Español",
+    "french": "Français",
+    "german": "Deutsch",
+    "portuguese": "Português",
+    "italian": "Italiano",
+    "japanese": "日本語",
+    "korean": "한국어",
+    "chinese": "中文",
+    "arabic": "العربية"
+  },
+  "errors": {
+    "networkError": "Error de red. Por favor verifica tu conexión.",
+    "invalidUrl": "URL de TikTok inválida proporcionada",
+    "fetchFailed": "Error al obtener información del video",
+    "downloadError": "Descarga fallida. Por favor intenta de nuevo."
+  },
+  "install": {
+    "title": "Instalar Descargador de TikTok",
+    "description": "Instala nuestra app para acceso más rápido y uso sin conexión",
+    "install": "Instalar App",
+    "installing": "Instalando...",
+    "later": "Tal vez después",
+    "mobileBanner": "¡Agrega Descargador de TikTok a tu pantalla de inicio para acceso rápido!",
+    "howTo": "¿Cómo instalar?",
+    "instructions": {
+      "title": "Cómo Instalar",
+      "ios": {
+        "title": "Para iPhone/iPad:",
+        "step1": "Toca el botón Compartir en la parte inferior de Safari",
+        "step2": "Desplázate hacia abajo y toca 'Agregar a pantalla de inicio'",
+        "step3": "Toca 'Agregar' para instalar la app"
+      },
+      "android": {
+        "title": "Para Android:",
+        "step1": "Toca el menú (⋮) en tu navegador",
+        "step2": "Selecciona 'Agregar a pantalla de inicio' o 'Instalar app'",
+        "step3": "Toca 'Instalar' para agregar la app"
+      }
+    }
+  }
+}
