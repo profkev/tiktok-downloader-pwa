@@ -2,12 +2,12 @@
   <div class="relative">
     <button
       @click="isOpen = !isOpen"
-      class="flex items-center gap-2 px-3 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-300"
+      class="flex items-center gap-2 px-4 py-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white hover:bg-gray-700/50 hover:border-tiktok-pink/50 transition-all duration-300"
     >
       <span class="text-lg">{{ currentLocale.flag }}</span>
-      <span class="hidden sm:block">{{ currentLocale.name }}</span>
+      <span class="hidden sm:block font-bold">{{ currentLocale.name }}</span>
       <svg 
-        class="w-4 h-4 transition-transform duration-200"
+        class="w-4 h-4 transition-transform duration-300"
         :class="{ 'rotate-180': isOpen }"
         fill="none" 
         stroke="currentColor" 
@@ -19,30 +19,30 @@
 
     <!-- Dropdown Menu -->
     <transition
-      enter-active-class="transition ease-out duration-200"
+      enter-active-class="transition ease-out duration-300"
       enter-from-class="opacity-0 scale-95"
       enter-to-class="opacity-100 scale-100"
-      leave-active-class="transition ease-in duration-150"
+      leave-active-class="transition ease-in duration-200"
       leave-from-class="opacity-100 scale-100"
       leave-to-class="opacity-0 scale-95"
     >
       <div
         v-if="isOpen"
-        class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 z-50 max-h-64 overflow-y-auto"
+        class="absolute right-0 mt-3 w-48 bg-gray-900/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-700/50 z-50 max-h-64 overflow-y-auto"
       >
         <div class="py-2">
           <button
             v-for="locale in SUPPORTED_LOCALES"
             :key="locale.code"
             @click="selectLanguage(locale.code)"
-            class="w-full px-4 py-2 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center gap-3"
-            :class="{ 'bg-tiktok-pink/10 text-tiktok-pink': locale.code === currentLocale.code }"
+            class="w-full px-4 py-3 text-left hover:bg-gray-800/50 transition-all duration-300 flex items-center gap-3 rounded-xl mx-2"
+            :class="{ 'bg-gradient-to-r from-tiktok-pink to-tiktok-blue text-white shadow-lg': locale.code === currentLocale.code, 'text-gray-300 hover:text-white': locale.code !== currentLocale.code }"
           >
             <span class="text-lg">{{ locale.flag }}</span>
-            <span class="font-medium">{{ locale.name }}</span>
+            <span class="font-bold">{{ locale.name }}</span>
             <svg
               v-if="locale.code === currentLocale.code"
-              class="w-4 h-4 ml-auto text-tiktok-pink"
+              class="w-4 h-4 ml-auto text-white"
               fill="currentColor"
               viewBox="0 0 20 20"
             >

@@ -2,24 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base styles */
+html, body {
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: #ffffff;
+}
+
+#app {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* TikTok-themed scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff0050, #00f2ea);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #e6004c, #00d4c4);
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 1023px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 @layer components {
   .btn-primary {
-    @apply bg-tiktok-pink hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:-translate-y-0.5 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none;
+    @apply bg-gradient-to-r from-tiktok-pink to-tiktok-blue hover:from-pink-600 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl;
   }
   
   .btn-secondary {
-    @apply bg-tiktok-blue hover:bg-cyan-400 text-tiktok-dark font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:-translate-y-0.5;
+    @apply bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 border border-gray-600 hover:border-gray-500;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent border-2 border-tiktok-pink text-tiktok-pink hover:bg-tiktok-pink hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105;
   }
   
   .input-field {
-    @apply w-full p-3 border-2 border-gray-300 rounded-lg text-base transition-colors duration-300 focus:outline-none focus:border-tiktok-pink;
+    @apply w-full p-4 border-2 border-gray-700 rounded-xl focus:outline-none focus:border-tiktok-pink focus:ring-2 focus:ring-tiktok-pink/20 bg-gray-800 text-white placeholder-gray-400 transition-all duration-300;
   }
   
   .card {
-    @apply bg-white rounded-xl p-6 shadow-lg;
+    @apply bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300;
   }
   
   .loading-spinner {
-    @apply inline-block w-5 h-5 border-2 border-gray-200 border-t-tiktok-pink rounded-full animate-spin;
+    @apply inline-block w-5 h-5 border-2 border-gray-600 border-t-tiktok-pink rounded-full animate-spin;
+  }
+
+  .tiktok-gradient-text {
+    @apply bg-gradient-to-r from-tiktok-pink to-tiktok-blue bg-clip-text text-transparent;
+  }
+
+  .tiktok-gradient-bg {
+    @apply bg-gradient-to-r from-tiktok-pink to-tiktok-blue;
+  }
+
+  .tiktok-card {
+    @apply bg-gray-900/80 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:shadow-tiktok-pink/20;
+  }
+
+  .tiktok-button {
+    @apply bg-gradient-to-r from-tiktok-pink to-tiktok-blue text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-tiktok-pink/30;
+  }
+
+  .tiktok-input {
+    @apply w-full p-4 border-2 border-gray-700 rounded-xl focus:outline-none focus:border-tiktok-pink focus:ring-2 focus:ring-tiktok-pink/20 bg-gray-800 text-white placeholder-gray-400 transition-all duration-300;
+  }
+
+  .tiktok-progress {
+    @apply w-full bg-gray-700 rounded-full h-3 overflow-hidden;
+  }
+
+  .tiktok-progress-bar {
+    @apply bg-gradient-to-r from-tiktok-pink to-tiktok-blue h-3 rounded-full transition-all duration-300;
+  }
+
+  .tiktok-icon {
+    @apply w-6 h-6 text-tiktok-pink;
+  }
+
+  .tiktok-feature-card {
+    @apply bg-gray-900/60 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-tiktok-pink/50 transition-all duration-300 hover:shadow-lg hover:shadow-tiktok-pink/20;
   }
 }

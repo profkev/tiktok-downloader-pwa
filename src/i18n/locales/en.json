@@ -6,7 +6,20 @@
   },
   "nav": {
     "home": "Home",
-    "trending": "Trending"
+    "trends": "Trends",
+    "discover": "Discover",
+    "challenges": "Challenges",
+    "live": "Live",
+    "settings": "Settings",
+    "help": "Help",
+    "about": "About",
+    "main": "Main",
+    "new": "New",
+    "quickActions": {
+      "pasteUrl": "Paste URL",
+      "clearHistory": "Clear History",
+      "shareApp": "Share App"
+    }
   },
   "download": {
     "title": "Download TikTok Videos",
@@ -32,6 +45,13 @@
     "sd": "SD", 
     "audio": "Audio"
   },
+  "hero": {
+    "getStarted": "Get Started Now"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Download your favorite TikTok videos in just 3 simple steps"
+  },
   "features": {
     "noWatermarks": {
       "title": "No Watermarks",
@@ -46,13 +66,90 @@
       "description": "Completely free service with fast download speeds"
     }
   },
-  "trending": {
-    "title": "Trending Videos",
-    "description": "Discover popular TikTok videos from around the world",
+  "trends": {
+    "title": "Trending Now",
+    "subtitle": "Discover what's popular on TikTok",
+    "tabs": {
+      "users": "Users",
+      "sounds": "Sounds",
+      "hashtags": "Hashtags"
+    },
+    "viewProfile": "View Profile",
+    "useSound": "Use Sound",
+    "exploreHashtag": "Explore"
+  },
+  "discover": {
+    "title": "Discover",
+    "subtitle": "Explore trending content and find something new",
+    "search": "Search",
+    "searchPlaceholder": "Search for users, sounds, or hashtags...",
+    "videos": "videos",
+    "featured": "Featured Content",
+    "trendingTopics": "Trending Topics",
+    "trending": "Trending",
+    "categories": {
+      "entertainment": "Entertainment",
+      "entertainmentDesc": "Comedy, music, and viral content",
+      "education": "Education",
+      "educationDesc": "Learn something new every day",
+      "sports": "Sports",
+      "sportsDesc": "Athletic achievements and highlights",
+      "lifestyle": "Lifestyle",
+      "lifestyleDesc": "Daily life, beauty, and wellness",
+      "technology": "Technology",
+      "technologyDesc": "Tech reviews and innovations",
+      "food": "Food",
+      "foodDesc": "Recipes, cooking tips, and food reviews",
+      "travel": "Travel",
+      "travelDesc": "Adventures and travel inspiration",
+      "art": "Art",
+      "artDesc": "Creative expressions and tutorials"
+    }
+  },
+  "challenges": {
+    "title": "Challenges",
+    "subtitle": "Join the latest viral challenges",
+    "featuredChallenge": "Featured Challenge",
+    "participants": "participants",
+    "views": "views",
+    "joinChallenge": "Join Challenge",
+    "watchVideos": "Watch",
     "loadMore": "Load More",
-    "noVideos": "No trending videos available at the moment",
-    "refreshing": "Refreshing trending videos...",
-    "refresh": "Refresh"
+    "daysLeft": "days left",
+    "filters": {
+      "trending": "Trending",
+      "new": "New",
+      "dance": "Dance",
+      "comedy": "Comedy",
+      "food": "Food"
+    },
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    }
+  },
+  "live": {
+    "title": "Live Streams",
+    "subtitle": "Watch live content from creators around the world",
+    "live": "LIVE",
+    "started": "Started",
+    "watchNow": "Watch Now",
+    "join": "Join",
+    "loadMore": "Load More",
+    "stats": {
+      "currentStreams": "Live Streams",
+      "totalViewers": "Total Viewers",
+      "totalHours": "Hours Today"
+    },
+    "categories": {
+      "all": "All",
+      "music": "Music",
+      "gaming": "Gaming",
+      "dance": "Dance",
+      "talk": "Talk Shows",
+      "cooking": "Cooking"
+    }
   },
   "language": {
     "select": "Select Language",
