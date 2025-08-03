@@ -3,14 +3,45 @@
     <!-- Download Section - Main Functionality -->
     <div class="max-w-2xl mx-auto mb-16">
       <div class="text-center mb-8">
-        <div class="flex items-center justify-center gap-4 mb-6">
+        <div class="flex items-center justify-center gap-6 mb-6">
           <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-r from-tiktok-pink to-tiktok-blue rounded-full blur-lg opacity-40 animate-tiktok-pulse"></div>
-            <svg class="w-16 h-16 text-tiktok-pink relative z-10" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43V7.56a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.05z"/>
-            </svg>
+            <div class="absolute inset-0 bg-gradient-to-r from-tiktok-pink to-tiktok-blue rounded-3xl blur-lg opacity-40 animate-tiktok-pulse"></div>
+            <div class="w-20 h-20 bg-gradient-to-r from-tiktok-pink to-tiktok-blue rounded-3xl relative z-10 flex items-center justify-center">
+              <!-- Download arrow with progress -->
+              <div class="relative">
+                <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14l-4-4h3V8h2v4h3l-4 4z"/>
+                </svg>
+                <!-- Download progress indicator -->
+                <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full flex items-center justify-center">
+                  <div class="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+              </div>
+            </div>
+            <!-- "NEW" badge -->
+            <div class="absolute -top-2 -right-2 bg-yellow-400 text-black text-sm font-bold px-2 py-1 rounded-full animate-bounce">
+              NEW
+            </div>
+            <!-- "No Watermark" badge -->
+            <div class="absolute -bottom-2 -left-2 bg-green-500 text-white text-sm font-bold px-2 py-1 rounded-full">
+              NO WM
+            </div>
+            <!-- "HD" badge -->
+            <div class="absolute top-2 -left-2 bg-blue-500 text-white text-sm font-bold px-2 py-1 rounded-full">
+              HD
+            </div>
           </div>
-          <h1 class="text-5xl md:text-6xl font-bold tiktok-gradient-text">{{ $t('app.title') }}</h1>
+          <div class="flex flex-col items-center">
+            <h1 class="text-5xl md:text-6xl font-bold tiktok-gradient-text">{{ $t('app.title') }}</h1>
+            <div class="flex items-center gap-2 mt-2">
+              <span class="text-sm bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-semibold">
+                ✓ No Watermark
+              </span>
+              <span class="text-sm bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full font-semibold">
+                ⚡ HD Quality
+              </span>
+            </div>
+          </div>
         </div>
         <p class="text-xl text-gray-300 mb-8 leading-relaxed">
           {{ $t('app.subtitle') }}
@@ -53,6 +84,118 @@
               <div class="ml-3">
                 <p class="text-red-200 font-medium">{{ error }}</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Information -->
+    <div v-if="videoInfo" class="max-w-4xl mx-auto mb-16">
+      <div class="tiktok-card">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Thumbnail -->
+          <div>
+            <div class="relative rounded-2xl overflow-hidden bg-gray-800 border border-gray-700">
+              <img
+                :src="videoInfo.thumbnail"
+                :alt="videoInfo.title"
+                class="w-full aspect-video object-cover"
+                @error="onImageError"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            </div>
+          </div>
+
+          <!-- Video Details -->
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-3 leading-tight">{{ videoInfo.title }}</h3>
+              <div class="flex items-center gap-6 text-gray-300 text-sm">
+                <span class="flex items-center">
+                  <svg class="w-5 h-5 mr-2 text-tiktok-pink" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                  </svg>
+                  {{ videoInfo.author }}
+                </span>
+                <span class="flex items-center">
+                  <svg class="w-5 h-5 mr-2 text-tiktok-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                  </svg>
+                  {{ formatDuration(videoInfo.duration) }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Download Options -->
+            <div>
+              <h4 class="text-xl font-bold text-white mb-4">{{ $t('download.downloadOptions') }}</h4>
+              
+              <div class="space-y-4">
+                <div
+                  v-for="quality in videoInfo.qualities"
+                  :key="`${quality.quality}-${quality.format}`"
+                  class="flex items-center justify-between p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-tiktok-pink/30"
+                >
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center"
+                         :class="quality.format === 'mp3' ? 'bg-tiktok-blue/20 text-tiktok-blue border border-tiktok-blue/30' : 'bg-tiktok-pink/20 text-tiktok-pink border border-tiktok-pink/30'">
+                      <svg v-if="quality.format === 'mp3'" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                      </svg>
+                      <svg v-else class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                      </svg>
+                    </div>
+                    
+                    <div>
+                      <p class="font-bold text-white">
+                        {{ quality.format === 'mp3' ? $t('video.audio') : $t('video.video') }} - {{ quality.quality }}
+                      </p>
+                      <p class="text-sm text-gray-400">
+                        {{ quality.format.toUpperCase() }} {{ $t('video.format') }}
+                        <span v-if="quality.size"> • {{ formatFileSize(quality.size) }}</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <button
+                    @click="downloadQuality(quality)"
+                    :disabled="downloadProgress.get(`${quality.quality}-${quality.format}`)?.status === 'downloading'"
+                    :class="quality.format === 'mp3' ? 'btn-outline' : 'tiktok-button'"
+                  >
+                    <span v-if="downloadProgress.get(`${quality.quality}-${quality.format}`)?.status === 'downloading'" 
+                          class="loading-spinner mr-2"></span>
+                    {{ getDownloadButtonText(quality) }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Progress -->
+    <div v-if="Array.from(downloadProgress.values()).some(p => p.status === 'downloading')" class="max-w-2xl mx-auto mb-16">
+      <div class="tiktok-card">
+        <h4 class="text-xl font-bold text-white mb-6">{{ $t('download.progress') }}</h4>
+        <div class="space-y-4">
+          <div
+            v-for="[key, progress] in downloadProgress"
+            :key="key"
+            v-show="progress.status === 'downloading'"
+            class="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50"
+          >
+            <div class="flex justify-between items-center mb-3">
+              <span class="font-bold text-white">{{ key }}</span>
+              <span class="text-sm text-gray-300">{{ progress.percentage }}%</span>
+            </div>
+            <div class="tiktok-progress">
+              <div
+                class="tiktok-progress-bar"
+                :style="{ width: `${progress.percentage}%` }"
+              ></div>
             </div>
           </div>
         </div>
@@ -149,120 +292,9 @@
       </div>
     </div>
 
-    <!-- Video Information -->
-    <div v-if="videoInfo" class="max-w-4xl mx-auto mb-12">
-      <div class="tiktok-card">
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Thumbnail -->
-          <div>
-            <div class="relative rounded-2xl overflow-hidden bg-gray-800 border border-gray-700">
-              <img
-                :src="videoInfo.thumbnail"
-                :alt="videoInfo.title"
-                class="w-full aspect-video object-cover"
-                @error="onImageError"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-            </div>
-          </div>
-
-          <!-- Video Details -->
-          <div class="space-y-6">
-            <div>
-              <h3 class="text-2xl font-bold text-white mb-3 leading-tight">{{ videoInfo.title }}</h3>
-              <div class="flex items-center gap-6 text-gray-300 text-sm">
-                <span class="flex items-center">
-                  <svg class="w-5 h-5 mr-2 text-tiktok-pink" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                  </svg>
-                  {{ videoInfo.author }}
-                </span>
-                <span class="flex items-center">
-                  <svg class="w-5 h-5 mr-2 text-tiktok-blue" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                  </svg>
-                  {{ formatDuration(videoInfo.duration) }}
-                </span>
-              </div>
-            </div>
-
-            <!-- Download Options -->
-            <div>
-              <h4 class="text-xl font-bold text-white mb-4">{{ $t('download.downloadOptions') }}</h4>
-              
-              <div class="space-y-4">
-                <div
-                  v-for="quality in videoInfo.qualities"
-                  :key="`${quality.quality}-${quality.format}`"
-                  class="flex items-center justify-between p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-tiktok-pink/30"
-                >
-                  <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center"
-                         :class="quality.format === 'mp3' ? 'bg-tiktok-blue/20 text-tiktok-blue border border-tiktok-blue/30' : 'bg-tiktok-pink/20 text-tiktok-pink border border-tiktok-pink/30'">
-                      <svg v-if="quality.format === 'mp3'" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-                      </svg>
-                      <svg v-else class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
-                      </svg>
-                    </div>
-                    
-                    <div>
-                      <p class="font-bold text-white">
-                        {{ quality.format === 'mp3' ? $t('video.audio') : $t('video.video') }} - {{ quality.quality }}
-                      </p>
-                      <p class="text-sm text-gray-400">
-                        {{ quality.format.toUpperCase() }} {{ $t('video.format') }}
-                        <span v-if="quality.size"> • {{ formatFileSize(quality.size) }}</span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <button
-                    @click="downloadQuality(quality)"
-                    :disabled="downloadProgress.get(`${quality.quality}-${quality.format}`)?.status === 'downloading'"
-                    :class="quality.format === 'mp3' ? 'btn-outline' : 'tiktok-button'"
-                  >
-                    <span v-if="downloadProgress.get(`${quality.quality}-${quality.format}`)?.status === 'downloading'" 
-                          class="loading-spinner mr-2"></span>
-                    {{ getDownloadButtonText(quality) }}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Download Progress -->
-    <div v-if="Array.from(downloadProgress.values()).some(p => p.status === 'downloading')" class="max-w-2xl mx-auto mb-12">
-      <div class="tiktok-card">
-        <h4 class="text-xl font-bold text-white mb-6">{{ $t('download.progress') }}</h4>
-        <div class="space-y-4">
-          <div
-            v-for="[key, progress] in downloadProgress"
-            :key="key"
-            v-show="progress.status === 'downloading'"
-            class="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50"
-          >
-            <div class="flex justify-between items-center mb-3">
-              <span class="font-bold text-white">{{ key }}</span>
-              <span class="text-sm text-gray-300">{{ progress.percentage }}%</span>
-            </div>
-            <div class="tiktok-progress">
-              <div
-                class="tiktok-progress-bar"
-                :style="{ width: `${progress.percentage}%` }"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Features Section -->
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto mb-16">
       <div class="grid md:grid-cols-3 gap-8">
         <div class="tiktok-feature-card text-center">
           <div class="w-20 h-20 bg-gradient-to-r from-tiktok-pink to-tiktok-blue rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -292,6 +324,28 @@
           </div>
           <h3 class="text-2xl font-bold text-white mb-3">{{ $t('features.freeFast.title') }}</h3>
           <p class="text-gray-300 leading-relaxed">{{ $t('features.freeFast.description') }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Footer -->
+    <div class="lg:hidden bg-gray-900/80 backdrop-blur-md border-t border-gray-700/50 py-6 mt-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-4">
+          <div class="flex justify-center gap-6 text-sm mb-4">
+            <router-link to="/about" class="text-gray-400 hover:text-white transition-colors duration-200">
+              {{ $t('nav.about') }}
+            </router-link>
+            <router-link to="/privacy" class="text-gray-400 hover:text-white transition-colors duration-200">
+              {{ $t('nav.privacy') }}
+            </router-link>
+            <a href="mailto:support@example.com" class="text-gray-400 hover:text-tiktok-pink transition-colors duration-200">
+              {{ $t('footer.contact') }}
+            </a>
+          </div>
+          <div class="text-gray-400 text-sm">
+            {{ $t('app.footer') }}
+          </div>
         </div>
       </div>
     </div>

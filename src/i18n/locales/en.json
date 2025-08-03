@@ -1,8 +1,11 @@
 {
   "app": {
-    "title": "TikTok Downloader",
+    "title": "TT HD Video Saver",
     "subtitle": "Fast, free, and without watermarks. Support for HD quality and MP3 audio.",
     "footer": "Download TikTok videos without watermarks - Fast & Free"
+  },
+  "footer": {
+    "contact": "Contact"
   },
   "nav": {
     "home": "Home",
@@ -13,6 +16,8 @@
     "settings": "Settings",
     "help": "Help",
     "about": "About",
+    "privacy": "Privacy",
+    "faq": "FAQ",
     "main": "Main",
     "new": "New",
     "quickActions": {
@@ -192,6 +197,279 @@
         "step2": "Select 'Add to Home screen' or 'Install app'",
         "step3": "Tap 'Install' to add the app"
       }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Learn more about our mission to provide the best video downloading experience",
+    "mission": {
+      "title": "Our Mission",
+      "description": "We believe that everyone should have the ability to save and enjoy their favorite videos offline. Our platform is designed to make video downloading simple, fast, and accessible to everyone.",
+      "commitment": "We are committed to providing a free, secure, and user-friendly service that respects your privacy while delivering the highest quality downloads."
+    },
+    "features": {
+      "quality": {
+        "title": "High Quality",
+        "description": "Download videos in the highest available quality, including HD and 4K resolutions when available."
+      },
+      "speed": {
+        "title": "Lightning Fast",
+        "description": "Our optimized servers ensure that your downloads are processed and delivered as quickly as possible."
+      },
+      "security": {
+        "title": "Secure & Private",
+        "description": "Your privacy is our priority. We don't store your personal data or track your downloads."
+      },
+      "free": {
+        "title": "Completely Free",
+        "description": "All our services are completely free with no hidden costs, registration requirements, or limitations."
+      }
+    },
+    "technology": {
+      "title": "Technology & Innovation",
+      "description": "Built with cutting-edge web technologies to ensure reliability, speed, and cross-platform compatibility.",
+      "modern": {
+        "title": "Modern Web App",
+        "description": "Progressive Web App technology for native-like experience"
+      },
+      "optimized": {
+        "title": "Performance Optimized",
+        "description": "Optimized algorithms for fastest processing times"
+      },
+      "secure": {
+        "title": "Security First",
+        "description": "End-to-end encryption and secure processing"
+      }
+    },
+    "support": {
+      "title": "What We Support",
+      "description": "Our platform supports a wide range of video formats and platforms to meet all your downloading needs.",
+      "formats": {
+        "title": "Supported Formats",
+        "tiktok": "TikTok Videos (all qualities)",
+        "mp4": "MP4 Video Files",
+        "mp3": "MP3 Audio Files"
+      },
+      "platforms": {
+        "title": "Compatible Platforms",
+        "web": "All Web Browsers",
+        "mobile": "Mobile Devices (iOS & Android)",
+        "desktop": "Desktop Computers"
+      }
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "description": "Have questions or need support? We're here to help you with any issues or feedback.",
+      "email": "Contact Support"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Your privacy matters to us. Learn how we protect and handle your data.",
+    "lastUpdated": "Last Updated",
+    "dataCollection": {
+      "title": "Information We Collect",
+      "description": "We are committed to collecting only the minimal information necessary to provide our video downloading service:",
+      "items": {
+        "urls": "Video URLs you submit for processing (temporarily cached for processing only, automatically deleted within 24 hours)",
+        "usage": "Anonymous usage statistics including download counts and popular video formats (no personal identification)",
+        "device": "Technical information such as browser type, device type, and IP address for security, compatibility, and fraud prevention",
+        "preferences": "Your language preferences and settings (stored locally on your device)",
+        "errors": "Error logs and diagnostic information to improve service reliability (automatically anonymized)"
+      }
+    },
+    "dataUsage": {
+      "title": "How We Use Your Information",
+      "description": "The information we collect is used exclusively for the following legitimate purposes:",
+      "processing": {
+        "title": "Video Processing & Download",
+        "description": "To retrieve, process, and deliver video content in your requested format and quality"
+      },
+      "improvement": {
+        "title": "Service Enhancement",
+        "description": "To analyze anonymous usage patterns, improve download speeds, and add new features based on user needs"
+      },
+      "security": {
+        "title": "Security & Fraud Prevention",
+        "description": "To protect our service from abuse, detect unusual activity, and ensure system security"
+      },
+      "legal": {
+        "title": "Legal Compliance",
+        "description": "To comply with applicable laws, regulations, and respond to lawful requests from authorities"
+      }
+    },
+    "dataStorage": {
+      "title": "Data Storage, Security & Retention",
+      "description": "We implement robust security measures and strict data retention policies to protect your information:",
+      "security": {
+        "title": "Security Measures",
+        "description": "All data is encrypted in transit using SSL/TLS. We use secure servers with regular security updates and monitoring. No video content is permanently stored on our servers."
+      },
+      "retention": {
+        "title": "Data Retention",
+        "description": "Video URLs: Deleted immediately after processing completion (maximum 1 hour). Usage statistics: Aggregated and anonymized, retained for 12 months. Error logs: Automatically purged after 30 days."
+      },
+      "location": {
+        "title": "Data Location",
+        "description": "Our servers are located in secure data centers with SOC 2 compliance. Data processing occurs in accordance with applicable privacy laws."
+      }
+    },
+    "thirdParty": {
+      "title": "Third-Party Services & Data Sharing",
+      "description": "We may use carefully selected third-party services to enhance our platform. We do not sell your personal information:",
+      "items": {
+        "apis": "Video platform APIs (TikTok, etc.) for content retrieval - only video URLs are shared, no personal data",
+        "analytics": "Privacy-focused analytics services (anonymized data only) to understand service usage patterns",
+        "cdn": "Content delivery networks to improve download speeds and reliability",
+        "security": "Security services for DDoS protection and threat detection",
+        "hosting": "Cloud hosting providers with strict data protection agreements"
+      },
+      "noSale": "We never sell, rent, or trade your personal information to third parties for marketing purposes."
+    },
+    "userRights": {
+      "title": "Your Privacy Rights",
+      "description": "You have important rights regarding your personal information under applicable privacy laws (GDPR, CCPA, etc.):",
+      "access": {
+        "title": "Right to Know",
+        "description": "Request information about what personal data we collect and how we use it"
+      },
+      "deletion": {
+        "title": "Right to Delete",
+        "description": "Request deletion of your personal information (note: most data is automatically deleted)"
+      },
+      "portability": {
+        "title": "Right to Portability",
+        "description": "Request a copy of your data in a machine-readable format"
+      },
+      "objection": {
+        "title": "Right to Object",
+        "description": "Object to certain types of data processing, including analytics"
+      },
+      "exercise": "To exercise these rights, contact us using the information below. We will respond within 30 days as required by law."
+    },
+    "cookies": {
+      "title": "Cookies & Local Storage",
+      "description": "We use minimal cookies and local storage to provide essential functionality and improve your experience:",
+      "essential": {
+        "title": "Essential Cookies",
+        "description": "Required for basic site functionality, security, and remembering your preferences (cannot be disabled)"
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "description": "Help us understand how our service is used to improve performance (can be disabled in your browser)"
+      },
+      "functional": {
+        "title": "Functional Storage",
+        "description": "Stores your language preference, download history, and settings locally on your device"
+      },
+      "manage": "You can manage cookie preferences in your browser settings. Disabling certain cookies may affect site functionality."
+    },
+    "legal": {
+      "title": "Legal Basis & Compliance",
+      "description": "Our processing of your personal data is based on the following legal grounds:",
+      "legitimate": {
+        "title": "Legitimate Interest",
+        "description": "Processing necessary for our legitimate interests in providing and improving our service"
+      },
+      "consent": {
+        "title": "Consent",
+        "description": "Where you have given clear consent for specific processing activities"
+      },
+      "contract": {
+        "title": "Contract Performance",
+        "description": "Processing necessary to provide the video downloading service you requested"
+      },
+      "compliance": "We comply with GDPR, CCPA, and other applicable privacy regulations. EU users have additional rights under GDPR."
+    },
+    "minors": {
+      "title": "Children's Privacy",
+      "description": "Our service is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately so we can delete such information."
+    },
+    "international": {
+      "title": "International Data Transfers",
+      "description": "Your information may be processed in countries other than your own. We ensure adequate protection through standard contractual clauses and other appropriate safeguards as required by applicable law."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have any questions about this Privacy Policy, want to exercise your rights, or have concerns about our data practices:",
+      "email": {
+        "title": "Privacy Officer",
+        "description": "For privacy-related inquiries, data requests, and complaints",
+        "action": "Contact Privacy Team"
+      },
+      "address": "You may also contact us by mail at: TT HD Video Saver Privacy Team, [Address to be updated with actual business address]",
+      "response": "We will respond to all privacy-related inquiries within 30 days as required by applicable law."
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "description": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify users of any material changes by posting the updated policy on this page with a new effective date. Continued use of our service after such changes constitutes acceptance of the updated policy."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to the most common questions about our video downloader service",
+    "searchPlaceholder": "Search questions...",
+    "questions": "questions",
+    "categories": {
+      "all": "All Questions",
+      "downloading": "Downloading",
+      "technical": "Technical Support"
+    },
+    "noResults": {
+      "title": "No Results Found",
+      "description": "Try adjusting your search terms or browse by category.",
+      "clearSearch": "Clear Search"
+    },
+    "contact": {
+      "title": "Still Need Help?",
+      "description": "Can't find what you're looking for? Contact our support team for personalized assistance.",
+      "email": "Contact Support"
+    },
+    "general": {
+      "q1": "What is TT HD Video Saver?",
+      "a1": "TT HD Video Saver is a free online tool that allows you to download TikTok videos in high quality without watermarks. Simply paste the TikTok video URL and download in your preferred format.",
+      "q2": "How do I remove watermarks from TikTok videos?",
+      "a2": "Our service automatically removes TikTok watermarks during the download process. Just paste the video URL and select the 'No Watermark' option to get clean videos without any TikTok branding.",
+      "q3": "Is this service safe and legal to use?",
+      "a3": "Yes, our service is completely safe to use. We don't store your personal information or downloaded content. However, please respect copyright laws and only download videos you have permission to use.",
+      "q4": "What devices are supported?",
+      "a4": "Our service works on all devices including computers, smartphones, and tablets. It's compatible with all modern browsers like Chrome, Firefox, Safari, and Edge.",
+      "q5": "Do I need to create an account?",
+      "a5": "No account registration is required. Our service is completely free and doesn't require any sign-up process. Just visit our website and start downloading immediately."
+    },
+    "downloading": {
+      "q1": "How do I download a TikTok video?",
+      "a1": "1. Copy the TikTok video URL from the app or website\n2. Paste the URL into our input field\n3. Click 'Get Video' to process\n4. Choose your preferred quality and format\n5. Click 'Download' to save the video",
+      "q2": "What video formats and qualities are available?",
+      "a2": "We offer multiple formats including MP4 for videos and MP3 for audio-only downloads. Quality options include HD (1080p), Standard (720p), and Mobile (480p) depending on the original video quality.",
+      "q3": "Can I download TikTok videos as MP3 audio files?",
+      "a3": "Yes! You can extract audio from TikTok videos and download them as high-quality MP3 files. This is perfect for downloading music or audio content from TikTok.",
+      "q4": "Can I download multiple videos at once?",
+      "a4": "Currently, our service processes one video at a time to ensure optimal quality and speed. You can download multiple videos by processing them individually.",
+      "q5": "Are there any download limits?",
+      "a5": "No, there are no daily download limits. You can download as many TikTok videos as you want, completely free of charge.",
+      "q6": "Can I download private TikTok videos?",
+      "a6": "No, our service can only download publicly available TikTok videos. Private videos require special permissions that we don't have access to.",
+      "q7": "Can I download TikTok live streams?",
+      "a7": "No, our service is designed for downloading regular TikTok videos. Live streams cannot be downloaded as they are real-time broadcasts.",
+      "q8": "Why is my download taking so long?",
+      "a8": "Download speed depends on your internet connection and the video size. HD videos take longer to process and download. If you're experiencing unusual delays, try refreshing the page and trying again."
+    },
+    "technical": {
+      "q1": "What should I do if the download fails?",
+      "a1": "If a download fails, try these steps:\n1. Check that the TikTok URL is valid and the video is public\n2. Refresh the page and try again\n3. Try a different browser\n4. Check your internet connection\n5. Contact support if the problem persists",
+      "q2": "Which browsers are supported?",
+      "a2": "Our service works best with modern browsers including Chrome, Firefox, Safari, Edge, and Opera. We recommend keeping your browser updated to the latest version for optimal performance.",
+      "q3": "Does this work on mobile devices?",
+      "a3": "Yes! Our service is fully responsive and works perfectly on mobile devices. You can download TikTok videos directly to your phone or tablet using any mobile browser.",
+      "q4": "Where are downloaded videos saved?",
+      "a4": "Downloaded videos are saved to your device's default download folder. On mobile devices, check your Downloads app or Photos app. You can usually change the download location in your browser settings.",
+      "q5": "Why is the video quality lower than expected?",
+      "a5": "Video quality depends on the original TikTok video quality. If the original was uploaded in lower quality, we cannot enhance it beyond that. We always provide the highest quality available from the source.",
+      "q6": "Is there any risk of viruses or malware?",
+      "a6": "No, our service is completely safe. We don't require any software downloads or installations. Everything is processed through your web browser, ensuring your device stays secure.",
+      "q7": "Why can't I access the service in my country?",
+      "a7": "Our service is available worldwide. If you're having trouble accessing it, the issue might be temporary or related to your internet provider. Try using a different network or contact support for assistance."
     }
   }
 }

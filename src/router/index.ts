@@ -28,6 +28,21 @@ const router = createRouter({
       path: '/live',
       name: 'live',
       component: () => import('@/views/Live.vue')
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('@/views/About.vue')
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: () => import('@/views/Privacy.vue')
+    },
+    {
+      path: '/faq',
+      name: 'faq',
+      component: () => import('@/views/FAQ.vue')
     }
   ]
 })

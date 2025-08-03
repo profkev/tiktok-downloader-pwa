@@ -17,12 +17,32 @@
     <div class="flex items-center justify-between p-6 border-b border-gray-700/50">
       <div class="flex items-center gap-3">
         <div class="relative">
-          <div class="absolute inset-0 bg-gradient-to-r from-tiktok-pink to-tiktok-blue rounded-lg blur-md opacity-30"></div>
-          <svg class="w-8 h-8 text-tiktok-pink relative z-10" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43V7.56a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.05z"/>
-          </svg>
+          <div class="absolute inset-0 bg-gradient-to-r from-tiktok-pink to-tiktok-blue rounded-xl blur-md opacity-30"></div>
+          <div class="w-10 h-10 bg-gradient-to-r from-tiktok-pink to-tiktok-blue rounded-xl relative z-10 flex items-center justify-center">
+            <!-- Download arrow with progress -->
+            <div class="relative">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14l-4-4h3V8h2v4h3l-4 4z"/>
+              </svg>
+              <!-- Download progress indicator -->
+              <div class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full flex items-center justify-center">
+                <div class="w-1 h-1 bg-white rounded-full"></div>
+              </div>
+            </div>
+          </div>
+          <!-- "NEW" badge -->
+          <div class="absolute -top-1 -right-1 bg-yellow-400 text-black text-xs font-bold px-1 py-0.5 rounded-full">
+            NEW
+          </div>
+          <!-- "HD" badge -->
+          <div class="absolute -bottom-1 -left-1 bg-green-500 text-white text-xs font-bold px-1 py-0.5 rounded-full">
+            HD
+          </div>
         </div>
-        <span class="text-xl font-bold tiktok-gradient-text">TikTok DL</span>
+        <div class="flex flex-col">
+          <span class="text-lg font-bold tiktok-gradient-text">TT HD Video Saver</span>
+          <span class="text-xs text-gray-300">No Watermark</span>
+        </div>
       </div>
       <button
         @click="$emit('close')"
@@ -208,19 +228,24 @@ const quickActions = [
 
 const settingsNavItems = [
   {
-    path: '/settings',
-    icon: 'fas fa-cog',
-    label: 'nav.settings'
+    path: '/about',
+    icon: 'fas fa-info-circle',
+    label: 'nav.about'
+  },
+  {
+    path: '/privacy',
+    icon: 'fas fa-shield-alt',
+    label: 'nav.privacy'
+  },
+  {
+    path: '/faq',
+    icon: 'fas fa-question-circle',
+    label: 'nav.faq'
   },
   {
     path: '/help',
     icon: 'fas fa-question-circle',
     label: 'nav.help'
-  },
-  {
-    path: '/about',
-    icon: 'fas fa-info-circle',
-    label: 'nav.about'
   }
 ]
 
