@@ -89,7 +89,7 @@
         <!-- Navigation Dots -->
         <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
           <button
-            v-for="(slide, index) in heroSlides"
+            v-for="(_, index) in heroSlides"
             :key="index"
             @click="currentSlide = index"
             :class="[
@@ -376,12 +376,6 @@ const stopSlideshow = () => {
   }
 }
 
-const scrollToDownload = () => {
-  const element = document.querySelector('.tiktok-input')
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  }
-}
 
 // Lifecycle
 onMounted(() => {
